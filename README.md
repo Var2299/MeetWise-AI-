@@ -49,10 +49,7 @@ This project was built and instrumented to achieve demonstrable, quantifiable re
     ```bash
     npm install
     ```
-3.  **Configure Environment:**
-   ## ⚙️ Setup and Installation (Cont.)
-
-### 3. Configure Environment Variables
+3.  **Configure Environment Variables**
 
 This project relies on several external services. To run the application locally, you must create a file named **`.env.local`** in the root of the project directory.
 
