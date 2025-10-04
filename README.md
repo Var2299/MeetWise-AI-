@@ -61,7 +61,7 @@ This project relies on several external services. To run the application locally
 * Ensure that `.env.local` is listed in your project's `.gitignore` file.
 
 Populate the newly created `.env.local` file with the following variables:
-
+```bash
 # =========================================================
 # CORE AI SERVICE - Gemini API Key
 # Required for all summarization and content generation calls.
