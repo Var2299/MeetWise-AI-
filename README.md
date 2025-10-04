@@ -9,7 +9,7 @@ This project was built and instrumented to achieve demonstrable, quantifiable re
 | Metric | Value | Proof |
 | :--- | :--- | :--- |
 | **Average Latency (API)** | **$\mathbf{5.71\text{ seconds}}$** | Time taken for the Gemini API call and route execution across multiple runs for 1000-word inputs. (See **`benchmark/`** for logs) |
-| **Text Reduction** | **$\mathbf{62.5%/%}$** | Average reduction ratio for $1000\text{-word}$ meeting transcripts to a $375\text{-word}$ summary output. |
+| **Text Reduction** | **$\mathbf{62.5/%}$%** | Average reduction ratio for $1000\text{-word}$ meeting transcripts to a $375\text{-word}$ summary output. |
 | **Model Used** | **`gemini-2.5-flash`** | Selected for its speed and high reasoning capability, crucial for low-latency delivery. |
 
 ---
