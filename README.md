@@ -1,4 +1,4 @@
-# ⚡ Flash AI Digest: High-Performance Meeting Summarizer
+# ⚡ MeetWise AI: High-Performance Meeting Summarizer
 
 A full-stack application leveraging the **Gemini 2.5 Flash API** and **Next.js** to deliver rapid, highly condensed meeting transcripts and automate distribution via email. This project demonstrates optimized API route performance and efficient use of Google's Generative AI.
 
@@ -8,17 +8,17 @@ This project was built and instrumented to achieve demonstrable, quantifiable re
 
 | Metric | Value | Proof |
 | :--- | :--- | :--- |
-| **Average Latency (API)** | **$\mathbf{5.71\text{ seconds}}$** | Time taken for the Gemini API call and route execution. (See **`benchmark/`** for logs) |
-| **Text Reduction** | **$\mathbf{62.5\%}$** | Average reduction ratio for $1000\text{-word}$ meeting transcripts to a concise $375\text{-word}$ summary. |
+| **Average Latency (API)** | **$\mathbf{5.71\text{ seconds}}$** | Time taken for the Gemini API call and route execution across multiple runs for 1000-word inputs. (See **`benchmark/`** for logs) |
+| **Text Reduction** | **$\mathbf{62.5\%}$** | Average reduction ratio for $1000\text{-word}$ meeting transcripts to a $375\text{-word}$ summary output. |
 | **Model Used** | **`gemini-2.5-flash`** | Selected for its speed and high reasoning capability, crucial for low-latency delivery. |
 
 ---
 
 ## ✨ Features & Functionality
 
-* **Ultra-Fast Summarization:** Takes raw meeting transcripts (e.g., from Zoom/Meet) as input and uses a carefully tuned prompt to generate a structured summary.
+* **Fast Summarization:** Takes raw meeting transcripts (e.g., from Zoom/Meet) as input and uses a carefully tuned prompt to generate a structured summary.
 * **Actionable Output:** Summaries are configured to prioritize key takeaways, decisions, and action items, not just generic text.
-* **Automated Email Dispatch:** The final summary output is immediately structured and prepared for sending to relevant users via a connected email service (e.g., Gmail/SendGrid integration).
+* **Automated Email Dispatch:** The final summary output is immediately structured and prepared for sending to relevant users via a connected email service (e.g., Gmail integration).
 * **Optimized API Route:** Performance instrumentation is built directly into the Next.js API route to accurately measure and minimize server-side latency.
 
 ---
@@ -26,7 +26,7 @@ This project was built and instrumented to achieve demonstrable, quantifiable re
 ## 🛠️ Tech Stack & Architecture
 
 ### Frontend
-* **Next.js 14 (App Router):** Modern React framework for routing and server components.
+* **Next.js 15 (App Router):** Modern React framework for routing and server components.
 * **React:** Building the user interface for transcript input and summary display.
 * **Tailwind CSS:** Utility-first framework for rapid, responsive styling.
 
@@ -63,6 +63,3 @@ This project was built and instrumented to achieve demonstrable, quantifiable re
     The application will be available at `http://localhost:3000`.
 
 ---
-## 📂 Project Structure
-
-A clean separation of application logic, configuration, and performance proofs.
