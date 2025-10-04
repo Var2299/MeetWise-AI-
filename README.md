@@ -50,12 +50,40 @@ This project was built and instrumented to achieve demonstrable, quantifiable re
     npm install
     ```
 3.  **Configure Environment:**
-    * Create a `.env.local` file.
-    * Add your new, regenerated Gemini API Key:
-        ```
-        GEMINI_API_KEY="AIzaSy..." 
-        ```
-    * (Optional: Add email service credentials for the distribution feature)
+   ## ⚙️ Setup and Installation (Cont.)
+
+### 3. Configure Environment Variables
+
+This project relies on several external services. To run the application locally, you must create a file named **`.env.local`** in the root of the project directory.
+
+**⚠️ Security Warning:**
+* ***NEVER*** commit your actual `.env.local` file to Git, as it contains sensitive API keys and credentials.
+* Ensure that `.env.local` is listed in your project's `.gitignore` file.
+
+Populate the newly created `.env.local` file with the following variables:
+
+# =========================================================
+# CORE AI SERVICE - Gemini API Key
+# Required for all summarization and content generation calls.
+# =========================================================
+GEMINI_API_KEY="AIzaSy...your_new_gemini_key_here..."
+
+# =========================================================
+# DATABASE (MONGODB) - Used for storing transcript history/user data (Optional)
+# =========================================================
+MONGODB_URI="mongodb+srv://user:pass@cluster.mongodb.net/dbname?retryWrites=true&w=majority"
+MONGODB_DB="your_database_name"
+
+# =========================================================
+# EMAIL DISPATCH SERVICE - SMTP Credentials
+# Used for the final step of automated summary distribution via email.
+# (Example: Configure for Gmail App Passwords, SendGrid, Mailgun, etc.)
+# =========================================================
+SMTP_HOST="smtp.example.com"
+SMTP_PORT="587"
+SMTP_USER="noreply@example.com"
+SMTP_PASS="your_app_password"
+
 4.  **Run Locally:**
     ```bash
     npm run dev
